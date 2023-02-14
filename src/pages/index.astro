@@ -1,0 +1,23 @@
+---
+import LayoutBase from "../layouts/LayoutBase.astro";
+---
+
+<style lang="scss">
+  .s-hero {
+    h1 {
+      font-size: 6rem;
+      text-align: center;
+    }
+  }
+</style>
+
+<LayoutBase
+  title="Página Inicial"
+  description="Descrição da página inicial"
+  url="/"
+  img="assets/social.jpg"
+>
+  <section class="container mx-auto w-full flex items-center justify-center">
+    <h1 class="text-5xl font-bold">Home</h1>
+  </section>
+</LayoutBase>

@@ -1,0 +1,9 @@
+---
+import { Image } from "@astrojs/image/components";
+import src from "../imgs/logo-dark.png";
+const alt = "A logo do Astro";
+---
+
+<a href="/">
+  <Image src={src} width={110} height={36} alt={alt} />
+</a>

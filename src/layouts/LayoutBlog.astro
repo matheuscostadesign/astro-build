@@ -1,0 +1,16 @@
+---
+import LayoutBase from "./LayoutBase.astro";
+const { frontmatter } = Astro.props;
+---
+
+<LayoutBase
+  title={frontmatter.title}
+  description={frontmatter.description}
+  url={frontmatter.url}
+  img={frontmatter.img}
+>
+  <article class="container mx-auto my-auto py-6">
+    <!-- conteúdo renderizado -->
+    <slot />
+  </article>
+</LayoutBase>
