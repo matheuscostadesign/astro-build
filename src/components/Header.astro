@@ -2,10 +2,18 @@
 import Logo from "../components/Logo.astro";
 ---
 
+<style lang="scss">
+  .menu-itens {
+    @media (max-width: 720px) {
+      display: none;
+    }
+  }
+</style>
+
 <header class="h-16 flex items-center bg-slate-900">
   <nav class="container mx-auto flex items-center justify-between">
     <Logo />
-    <ul class="flex items-center gap-8 text-zinc-50">
+    <ul class="menu-itens flex items-center gap-8 text-zinc-50">
       <li><a href="/">Home</a></li>
       <li><a href="/sobre">Sobre</a></li>
       <li><a href="/contato">Contato</a></li>

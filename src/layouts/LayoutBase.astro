@@ -19,20 +19,17 @@ const { title, description, url, img } = Astro.props;
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`${import.meta.env.BASE_URL}${url}`} />
+    <meta property="og:url" content={`${Astro.url.origin}${url}`} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={img} />
+    <meta property="og:image" content={`${Astro.url.origin}${img}`} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://proansi.com.br/" />
+    <meta property="twitter:url" content={`${Astro.url.origin}${url}`} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
-    <meta
-      property="twitter:image"
-      content={`${import.meta.env.BASE_URL}${img}`}
-    />
+    <meta property="twitter:image" content={`${Astro.url.origin}${img}`} />
 
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />

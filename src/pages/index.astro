@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import LayoutBase from "../layouts/LayoutBase.astro";
 ---
 
@@ -14,10 +15,16 @@ import LayoutBase from "../layouts/LayoutBase.astro";
 <LayoutBase
   title="Página Inicial"
   description="Descrição da página inicial"
-  url="/"
-  img="assets/social.jpg"
+  url=""
+  img="/assets/social.jpg"
 >
-  <section class="container mx-auto w-full flex items-center justify-center">
-    <h1 class="text-5xl font-bold">Home</h1>
+  <section class="w-full flex items-center justify-center bg-slate-800">
+    <Image
+      src="/assets/logo-dark.png"
+      width={640}
+      height={220}
+      format="png"
+      alt="Logo Astro"
+    />
   </section>
 </LayoutBase>
