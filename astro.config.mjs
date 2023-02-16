@@ -25,6 +25,19 @@ import partytown from "@astrojs/partytown";
 import critters from "astro-critters";
 
 // https://astro.build/config
+import robotsTxt from "astro-robots-txt";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image(), mdx(), compress(), sitemap(), prefetch(), partytown(), critters()]
+  integrations: [
+    tailwind(),
+    image(),
+    mdx(),
+    compress(),
+    sitemap(),
+    prefetch(),
+    partytown(),
+    critters(),
+    robotsTxt(),
+  ],
 });
