@@ -22,6 +22,9 @@ import prefetch from "@astrojs/prefetch";
 import partytown from "@astrojs/partytown";
 
 // https://astro.build/config
+import critters from "astro-critters";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image(), mdx(), compress(), sitemap(), prefetch(), partytown()]
+  integrations: [tailwind(), image(), mdx(), compress(), sitemap(), prefetch(), partytown(), critters()]
 });
