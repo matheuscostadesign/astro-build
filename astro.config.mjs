@@ -10,6 +10,9 @@ import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
+import compress from "astro-compress";
+
+// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), image(), mdx()]
+  integrations: [tailwind(), image(), mdx(), compress()],
 });
