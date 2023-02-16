@@ -27,6 +27,8 @@ import critters from "astro-critters";
 // https://astro.build/config
 import robotsTxt from "astro-robots-txt";
 
+import { astroImageTools } from "astro-imagetools";
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
@@ -39,5 +41,6 @@ export default defineConfig({
     partytown(),
     critters(),
     robotsTxt(),
+    [astroImageTools],
   ],
 });
