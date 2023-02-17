@@ -12,7 +12,7 @@ import Logo from "../components/Logo.astro";
   }
 </style>
 
-<header class="h-16 flex items-center bg-slate-900">
+<header class="h-16 flex items-center bg-slate-900 dark:bg-black">
   <nav class="container mx-auto flex items-center justify-between">
     <Logo />
     <ul class="menu-itens flex items-center gap-8 text-zinc-50">
@@ -24,10 +24,9 @@ import Logo from "../components/Logo.astro";
 
     <ThemeSwitch strategy="button" defaultTheme="system">
       <button class="flex gap-4 px-3 py-1">
-        <span class="dark:hidden text-white">Claro</span>
-        <span class="hidden dark:block">Escuro</span>
-        <Icon class="dark:hidden text-white w-6" name="ic:baseline-wb-sunny" />
-        <Icon class="hidden dark:block w-6" name="ic:baseline-dark-mode" />
+        <span class="text-white">Tema</span>
+        <img class="dark:hidden w-6" src="/assets/sun.svg" alt="" />
+        <img class="hidden dark:block w-6" src="/assets/moon.svg" alt="" />
       </button>
     </ThemeSwitch>
   </nav>
