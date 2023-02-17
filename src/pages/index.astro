@@ -18,13 +18,24 @@ import LayoutBase from "../layouts/LayoutBase.astro";
   url=""
   img="/assets/social.jpg"
 >
-  <section class="w-full flex items-center justify-center bg-slate-800">
+  <section
+    class="w-full flex items-center justify-center bg-white dark:bg-slate-800"
+  >
+    <Image
+      src="/assets/logo-light.png"
+      width={640}
+      height={220}
+      format="png"
+      alt="Logo Astro"
+      class="dark:hidden"
+    />
     <Image
       src="/assets/logo-dark.png"
       width={640}
       height={220}
       format="png"
       alt="Logo Astro"
+      class="hidden dark:block"
     />
   </section>
 </LayoutBase>

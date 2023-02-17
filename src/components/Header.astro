@@ -1,4 +1,6 @@
 ---
+import { ThemeSwitch } from "astro-color-scheme";
+import { Icon } from "astro-icon";
 import Logo from "../components/Logo.astro";
 ---
 
@@ -19,5 +21,14 @@ import Logo from "../components/Logo.astro";
       <li><a href="/contato">Contato</a></li>
       <li><a href="/blog/post">Blog</a></li>
     </ul>
+
+    <ThemeSwitch strategy="button" defaultTheme="system">
+      <button class="flex gap-4 px-3 py-1">
+        <span class="dark:hidden text-white">Claro</span>
+        <span class="hidden dark:block">Escuro</span>
+        <Icon class="dark:hidden text-white w-6" name="heroicons-outline:sun" />
+        <Icon class="hidden dark:block w-6" name="heroicons-outline:moon" />
+      </button>
+    </ThemeSwitch>
   </nav>
 </header>
